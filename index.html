@@ -126,9 +126,9 @@
     section.collapsible > .sec-head .head-inner h2{max-width:20ch}
     section.collapsible > .sec-head .head-inner p{max-width:60ch}
   }
-  .sec-body{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s ease;overflow:hidden}
+  .sec-body{display:grid;grid-template-rows:0fr;grid-template-columns:minmax(0,1fr);transition:grid-template-rows .45s ease;overflow:hidden}
   section.collapsible.open .sec-body{grid-template-rows:1fr}
-  .sec-body > .sec-body-inner{min-height:0;overflow:hidden}
+  .sec-body > .sec-body-inner{min-height:0;min-width:0;overflow:hidden}
   section.collapsible.open .sec-body > .sec-body-inner{padding-top:clamp(36px,5vh,60px);overflow:visible}
 
   /* who / stats */
@@ -243,7 +243,7 @@
   .sys-col .sys-name{font-family:var(--display);font-size:1.02rem;letter-spacing:-.01em}
   .sys-col .sys-tag{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--clay-2);white-space:nowrap}
   /* web carousel */
-  .web-rail-wrap{position:relative}
+  .web-rail-wrap{position:relative;max-width:100%;min-width:0}
   .web-rail{display:flex;gap:clamp(16px,2vw,26px);overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 22px;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:var(--line-strong) transparent}
   .web-rail::-webkit-scrollbar{height:6px}
   .web-rail::-webkit-scrollbar-thumb{background:var(--line-strong);border-radius:99px}
